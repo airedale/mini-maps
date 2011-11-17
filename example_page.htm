@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+	<title>Minimum Mini-map Call</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>  
+    
+    <script src="/js/mini_maps_min.js"></script>
+              
+    <style type="text/css">
+    
+    .expandable { 
+        width: 300px; /* sets the map width */
+        padding: 10px; /* any padding around the map */       
+    }
+  
+    </style>
+    
+</head>
+
+<body>
+ 
+
+<h3>Minimum code to place a minimap on the page</h3> 
+
+<div id="anyName1" class="expandable"><iframe src="/_includes/smallmap_min.htm?lat=-31.9&lon=115.8&mzoom=13" width="100%" height="100%" frameborder="0" scrolling="no"></iframe></div>
+<script type="text/javascript">resize16x9("anyName1");</script>
+<p>
+<strong>Include in the &lt;head&gt; section, reference to:</strong>
+</p>
+<p> 
+<strong>jQuery library:</strong> &lt;script src="http://code.jquery.com/jquery-1.7.min.js"&gt;&lt;/script&gt; 
+</p>      
+<p>
+<strong>Mini-map javascript functions:</strong> &lt;script src="/js/mini_maps_min.js"&gt;&lt;/script&gt;
+</p>
+      
+<strong>CSS class:</strong><br />
+<pre>
+    &lt;style type="text/css"&gt;
+    
+        .expandable { 
+            width: 300px; /* sets the map width */        
+        }
+  
+    &lt;/style&gt;
+</pre>
+
+<strong>In the page &lt;body&gt;:</strong>
+
+<p>Include reference to the file named "smallmap_min.htm" and if an animated GIF image named "wait.gif" exists in the same location, it will be displayed before the map is rendered.</p>
+
+<p>
+<pre>    
+&lt;div id="SomeIdName" class="expandable"&gt;
+
+    &lt;iframe src="smallmap_min.htm?lat=-31.9&lon=115.8" width="100%" height="100%" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;resize16x9("SomeIdName");&lt;/script&gt;
+</pre></p>
+
+<p><strong>Required files:</strong> "smallmap_min.htm", "wait.gif"(optional)</p>
+<p>
+<strong>Parameters can be entered <u>in any order</u>:</strong>
+
+    <ul>
+        <li>'latitude' or 'lat' = decimal (required)</li>
+        <li>'longitude' or 'long' or 'lon' = decimal (required)</li>
+        <li>'mzoom' or 'mapzoom' = integer [1-20]</li>
+        <li>'caption' = string</li>
+        <li>'mstreetview' or 'streetview' = boolean [true/false]</li>
+        <li>'mzoomcontrol' or 'mapzoomcontrol' = boolean [true/false]</li>
+        <li>'mtypecontrol' or 'maptypecontrol' = boolean [true/false]</li>
+        <li>'mtypeid' or 'maptypeid' = integer [0=ROADMAP(default); 1=SATELLITE; 2=HYBRID; 3=TERRAIN]</li>
+        <li>'marker' = boolean [true/false]</li>
+    </ul>
+<strong>OK for multiple maps per page</strong>    
+</p>
+
+
+
+</body>
+</html>
